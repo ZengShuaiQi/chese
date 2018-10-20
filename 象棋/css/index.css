@@ -1,0 +1,27 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+body{
+    background: url("../stype_2/bg.jpg") center center repeat-y;
+}
+.game{
+    width: 530px;
+    margin: 20px auto;
+    text-align: center;
+    color: #fff;
+    /*position: relative;*/
+}
+h1{
+    padding-bottom: 20px;
+}
+
+#chess{
+    position: relative;
+    /*width: 507px;*/
+    /*height: 567px;*/
+}
+
+
+
+

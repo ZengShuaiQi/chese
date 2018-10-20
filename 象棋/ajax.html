@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <title>Title</title>
+</head>
+<body>
+<input type="button" id="btn_post" value="post">
+<input type="button" id="btn_get" value="get">
+<input type="text" id="txt">
+</body>
+</html>
+<script src="../jquery-1.12.4.js"></script>
+<script>
+var mvs = [0];
+    console.log(mvs.length);
+
+    $("#btn_post").click(function () {
+        $.ajax({
+            url:"http://192.168.92.30/test/test.php",
+            type:"post",
+            data:{move:"石乐志"},
+            success:function(data){
+                // window.clearInterval();
+                console.log("over..");
+            },
+            error:function(e){
+                // alert("错误！！");
+                // window.clearInterval(timer);
+            }
+        });
+    });
+    $("#btn_get").click(function () {
+        $.ajax("http://192.168.92.30/test/get.php", {
+            data: {
+                'cityname': '成都',
+                'date': '2016.12.12'
+            },
+            dataType: 'text',
+            crossDomain: true,
+            success: function (data) {
+
+                    console.log(data);
+
+            },
+            error:function(e){
+                        console.log("错误");
+                        // window.clearInterval(timer);
+                    }
+
+        });
+
+    });
+
+
+</script>
